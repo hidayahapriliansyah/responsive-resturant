@@ -1,0 +1,5 @@
+HATI HATIIIIII
+
+1. Ngemap yang isinya Manggil component perasaan udah bener,
+tapi gak muncul si componenya ...
+eh tahu tahu ternyata di function component nya gak nge RETURN ADIIIIII
