@@ -5,16 +5,16 @@ import { meal } from '../../constants';
 import './Intro.css';
 
 const Intro = () => {
-  const [playVideo, setPlayVideo] = useState(true);
+  const [playVideo, setPlayVideo] = useState(false);
   const vidRef = React.useRef();
 
   const handleVideo = () => {
     setPlayVideo((prevplayVideo => !prevplayVideo));
 
     if (playVideo) {
-      vidRef.current.pause();
-    } else {
       vidRef.current.play();
+    } else {
+      vidRef.current.pause();
     }
   };
   
@@ -25,6 +25,7 @@ const Intro = () => {
         ref={vidRef}
         type="video/mp4"
         loop
+        autoPlay
         controls={false}
         muted
       >
@@ -37,8 +38,8 @@ const Intro = () => {
         >
           {
             playVideo
-            ? <BsPauseFill color="#fff" fontSize={30} />
-            : <BsFillPlayFill color="#fff" fontSize={30} />
+            ? <BsFillPlayFill color="#fff" fontSize={30} />
+            : <BsPauseFill color="#fff" fontSize={30} />
           }
         </div>
       </div>
