@@ -5,13 +5,13 @@ import { meal } from '../../constants';
 import './Intro.css';
 
 const Intro = () => {
-  const [pauseVideo, setPauseVideo] = useState(false);
+  const [playVideo, setPlayVideo] = useState(true);
   const vidRef = React.useRef();
 
   const handleVideo = () => {
-    setPauseVideo((prevPauseVideo => !prevPauseVideo));
+    setPlayVideo((prevplayVideo => !prevplayVideo));
 
-    if (pauseVideo) {
+    if (playVideo) {
       vidRef.current.pause();
     } else {
       vidRef.current.play();
@@ -27,19 +27,18 @@ const Intro = () => {
         loop
         controls={false}
         muted
-        autoPlay
       >
       </video>
 
       <div className="app__video-overlay flex__center">
         <div className={`app__video-overlay_circle flex__center
-        ${ pauseVideo ? 'hide' : '' }`}
+        ${ playVideo ? 'hide' : '' }`}
           onClick={handleVideo}
         >
           {
-            pauseVideo
-            ? <BsFillPlayFill color="#fff" fontSize={30} />
-            : <BsPauseFill color="#fff" fontSize={30} />
+            playVideo
+            ? <BsPauseFill color="#fff" fontSize={30} />
+            : <BsFillPlayFill color="#fff" fontSize={30} />
           }
         </div>
       </div>
