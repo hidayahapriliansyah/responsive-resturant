@@ -7,7 +7,7 @@ import { images } from '../../constants';
 
 import './Gallery.css';
 
-const galleryImages = [images.gallery01, images.gallery02, images.gallery03, images.gallery04s];
+const galleryImages = [images.gallery01, images.gallery02, images.gallery03, images.gallery04];
 
 const Gallery = () => {
   const scrollRef = React.useRef(null);
