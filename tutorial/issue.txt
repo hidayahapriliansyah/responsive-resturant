@@ -1,0 +1,4 @@
+Navbar tidak mengikuti view port iPhone 12 Pro.
+
+restrart 'npm run start'
+
